@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday Innocent (Lala)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      padding: 50px 20px;
+      background: #ffe4e1;
+    }
+    header h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3em;
+      margin: 0;
+      color: #a32f58;
+    }
+    header p {
+      font-size: 1.3em;
+      font-style: italic;
+      margin-top: 10px;
+    }
+    nav {
+      margin: 30px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #a32f58;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+    section {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    h2 {color: #a32f58;
+      font-family: 'Dancing Script', cursive;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .note {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      font-size: 1.1em;
+      line-height: 1.5;
+      color: #5a2a3a;
+    }
+    /* Music Control Button */
+    .music-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ffe4e1;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5em;
+      color: #a32f58;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      outline: none;
+    }
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;z-index: 1000;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> Happy Birthday 21st, Innocent (Lala)</h1>
+    <p>To my lala, on his special day</p>
+  </header>
+
+  <nav>
+    <a href="#gallery">Gallery</a>
+    <a href="#notes">Love Notes</a>
+  </nav>
+
+  <section id="gallery">
+    <h2>Memories </h2>
+    <div class="gallery">
+      <img src="photo8.jpg" alt="Memory 6" align="left" width="25%" height="45%" />
+      
+    </div>
+  </section>
+
+  <section id="notes" >
+    <h2>Love Notes</h2>
+    <div class="note" align="Left">
+	<img src="photo4.jpg" alt="Memory 4" align="right"width="25%" height="45%" />
+      <p><strong>My Love,</strong><br><br>
+      Happy Birthday!<br>
+      Today, I just want to remind you how deeply loved, appreciated, and cherished you are — not just by me, but by everyone lucky enough to know you.<br><br>
+	  <img src="photo2.jpg" alt="Memory 2"  align="left"width="25%" height="45%" />
+      You have a way of making even ordinary moments feel special. Your kindness, your laughter, your strength — they inspire me every day. I’m so grateful to walk through life with someone as amazing as you.<br><br>
+	  <img src="photo5.jpg" alt="Memory 5"  align="right" width="25%" height="45%" />
+      As you celebrate today, I hope you feel proud of the person you are and excited about everything ahead. I’ll be right here cheering you on, loving you through it all.<br><br>Here’s to more memories, more laughter, and more of <em>us</em>.<br>
+     </p>
+     </div>
+	
+	 <div class="note" align="right">
+	 <img src="photo6.jpg" alt="Memory 4" align="left"width="25%" height="45%" />
+      <p><strong>My Love,</strong><br><br>
+    
+      On this special day, I thank the Lord for your life — for the light you bring into the world and into my heart. You are a true reflection of God’s grace, love, and faithfulness.<br><br>
+     <img src="photo1.jpg" alt="Memory 1"  align="right" width="25%" height="45%" />
+     My prayer for you today is that God continues to guide your steps, strengthen your spirit, and surround you with peace.<br><br> May His purpose for your life unfold beautifully and in His perfect timing.
+
+     As you step into this new year, may you grow in wisdom, walk in favour, and experience breakthrough after breakthrough. Remember: “He who began a good work in you will carry it on to completion” (Philippians 1:6).<br><br>
+     <img src="photo7.jpg" alt="Memory 7"  align="left" width="25%" height="45%" />
+     You are loved deeply, not just by me, but by the One who created you for greatness.<br><br>
+      Happy Birthday, baby. love you .<br><br>
+       yours truly,<br>
+      Nana</p>
+    </div>
+  </section>
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="something_soweto_happy_birthday.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <button id="music-toggle" class="music-control" title="Play/Pause Music">🎵</button>
+
+  <!-- Lightbox for images -->
+  <div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="Expanded photo" />
+  </div>
+
+  <script>
+    // Music toggle
+    const music = document.getElementById('bg-music');
+    const btn = document.getElementById('music-toggle');
+    let playing = false;
+
+    btn.addEventListener('click', () => {
+      if (playing) {
+        music.pause();
+        btn.textContent = '🎵';
+      } else {
+        music.play();
+        btn.textContent = '⏸';
+      }
+      playing = !playing;
+    });
+
+    // Lightbox
+    const galleryImgs = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+
+    galleryImgs.forEach(img => {img.addEventListener('click', () => {
+        lbImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
+
+
